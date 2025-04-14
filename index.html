@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Assignment Animator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Assign Options</h1>
+            <p>Enter names and options, then watch the assignment!</p>
+        </header>
+
+        <main class="main-content">
+            <section class="input-section app-card">
+                <h2>Configuration</h2>
+                <div class="form-group">
+                    <label for="namesInput">Enter Names (comma separated):</label>
+                    <textarea id="namesInput" rows="3" placeholder="e.g. Name 1, Name 2, Name 3, .. ect"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="optionsInput">Enter Options (comma separated):</label>
+                    <textarea id="optionsInput" rows="3" placeholder="e.g. Task A, Task B, Task C, .. ect"></textarea>
+                </div>
+                <button id="assignButton" class="btn btn-primary">Assign & Animate</button>
+            </section>
+
+            <section class="animation-section">
+                <div class="animation-area" id="animationArea">
+                    <div class="placeholder-text">Assignments will appear here...</div>
+                </div>
+            </section>
+        </main>
+
+        <div id="resultsModal" class="modal-overlay" style="display: none;">
+            <div class="modal-content app-card">
+                <button id="closeModalButton" class="modal-close-btn">&times;</button>
+                <h2>Assignment Results</h2>
+                <ul id="resultList">
+                    </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
